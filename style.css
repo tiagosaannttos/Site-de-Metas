@@ -1,0 +1,133 @@
+/* Configuração geral */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #331F19;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos para o modo escuro */
+.modo-escuro {
+    background-color: #121212;
+    color: #F4F0EA;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    background-color: #CBBBA7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    border: 2px solid #8B7D70;
+}
+
+.modo-escuro .container {
+    background-color: #333;
+    border-color: #555;
+}
+
+/* Títulos e textos */
+h1, p {
+    color: #331F19;
+}
+
+.modo-escuro h1, .modo-escuro p {
+    color: #F4F0EA;
+}
+
+/* Botões */
+button {
+    background-color: #60041A;
+    color: #F4F0EA;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #A34743;
+}
+
+/* Lista de tarefas */
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+ul li {
+    animation: fadeIn 0.3s ease-in-out;
+    background-color: #F4F0EA;
+    color: #331F19;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modo-escuro ul li {
+    background-color: #222;
+    color: #F4F0EA;
+}
+
+ul li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Tarefa concluída */
+.concluida {
+    text-decoration: line-through;
+    color: #888;
+    opacity: 0.6;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Botão de remover */
+.remover {
+    background-color: #A34743;
+    border: none;
+    padding: 5px 10px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.remover:hover {
+    background-color: #60041A;
+}
+
+/* Campo de prazo */
+.prazo {
+    margin-left: 10px;
+    padding: 5px;
+    border: 1px solid #8B7D70;
+    border-radius: 5px;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
